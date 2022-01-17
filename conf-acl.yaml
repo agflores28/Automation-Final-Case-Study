@@ -1,0 +1,14 @@
+---
+- name: Router1_acl
+  hosts: R1
+  gather_facts: false
+  connection: local
+
+  tasks:
+    - name: Router1_setup_acl
+      ios_command:
+        commands:
+          - config terminal
+          - access-list 179 permit tcp 192.168.10.0 0.0.0.255 192.168.10.62 0.0.0.0
+          - access-list 179 permit udp 192.168.10.0 0.0.0.255 192.168.10.62 0.0.0.255
+      register: acl

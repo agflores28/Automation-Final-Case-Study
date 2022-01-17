@@ -1,0 +1,2 @@
+R1 ansible_user=cisco ansible_password=cisco123 ansible_host=192.168.10.62 
+R2 ansible_user=cisco ansible_password=cisco123 ansible_host=192.168.20.62 
